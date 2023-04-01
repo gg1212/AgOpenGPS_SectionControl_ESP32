@@ -5,6 +5,7 @@ The ESP32 is connected to my mobile hotspot using WiFi, my laptop running AOG is
 You need to edit the code and add your WiFi SSID and password before uploading the code to ESP32.
 
 That's a wiring diagram for 7sections, main(work) switch and manual/auto switch:
+
 ![wiring diagram](/Images/esp32_wiring_diagram.png)
 
 
