@@ -5,7 +5,7 @@ The ESP32 is connected to my mobile hotspot using WiFi, my laptop running AOG is
 You need to edit the code and add your WiFi SSID and password before uploading the code to ESP32.
 
 That's a wiring diagram for 7sections, main(work) switch and manual/auto switch:
-![wiring diagram](https://github.com/gg1212/AgOpenGPS_SectionControl_ESP32/tree/main/AOG_SectionControl_ESP32_wifi/Images/esp32_wiring_diagram.png")
+![wiring diagram](/Images/esp32_wiring_diagram.png)
 
 
 This code is based on [mtz8302/AOG_SectionControl_ESP32](https://github.com/mtz8302/AOG_SectionControl_ESP32) for which I removed all the rate control and web interface related stuff. I have also updated the communication code to make it ready for v5.7.2
