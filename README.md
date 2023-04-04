@@ -9,4 +9,4 @@ That's a wiring diagram for 7sections, main(work) switch and manual/auto switch:
 ![wiring diagram](/Images/esp32_wiring_diagram.png)
 
 
-This code is based on [mtz8302/AOG_SectionControl_ESP32](https://github.com/mtz8302/AOG_SectionControl_ESP32) for which I removed all the rate control and web interface related stuff. I have also updated the communication code to make it ready for v5.7.2
+This code is based on [mtz8302/AOG_SectionControl_ESP32](https://github.com/mtz8302/AOG_SectionControl_ESP32) for which all the rate control and web interface related stuff have been removed. The communication code has also been updated to make it ready for AOG v5.7.2 UDP.

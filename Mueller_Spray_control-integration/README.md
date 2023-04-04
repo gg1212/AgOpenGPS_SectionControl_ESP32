@@ -1,6 +1,6 @@
 # Mueller Spray Control computer ESP32 Section Control
 ## Overview
-I have connected the section control unit between the existing Mueller Spray Control boxes and the sprayer. This allows me to do section control without any modification to the existing boxes and cables.
+The section control unit is connected between the existing Mueller Spray Control boxes and the sprayer. This allows me to do section control without any modification to the existing boxes and cables.
 
 In manual mode, AOG displays the working area based on the section status.
 
@@ -11,26 +11,26 @@ The overview of my setup:
 ![overview](/Mueller_Spray_control-integration/Images/global.png)
 
 ## Reading section state from reverse polarity valves
-My valves are reverse polarity, so to read the state on the ESP32, I have added a PC817 8 channel board. I connected the section wire on which there is 12v when the section is open to the PC817 board.
-There is also a bypass valve (reverse polarity too) on my sprayer and I connected that to the 8th channel on the PC817 to activate the main(work) switch.
+My sprayer valves are reverse polarity, so to read the state on the ESP32, a PC817 8 channel board has been used. The section wire on which there is 12v when the section is open has been connected to the PC817 board.
+There is also a bypass valve (reverse polarity too) on my sprayer and it has been connected to the 8th channel on the PC817 to activate the main(work) switch.
 
 ![esp32](/Mueller_Spray_control-integration/Images/esp32.png)
 
 ## Relay board & sending section status to rate computer
 ### Relay board
-Valves are reverse polarity here is the challenge, you need 2 relays per section valve. 12V goes to NC of relay 1 and NO of relay 2. GND goes to NO of relay 1 and NC of relay 2. The section valve is connected to relay 1 & 2 COM.
+Valves are reverse polarity so you need 2 relays per section valve. 12V goes to NC of relay 1 and NO of relay 2. GND goes to NO of relay 1 and NC of relay 2. The section valve is connected to relay 1 & 2 COM.
 
-So for the 7 sections, I used 14 relays of a 16 relays board which I connected as in the example below.
+So for my 7 sections sprayer, 14 relays of a 16 relays board have been used. They have been wired as in the example below.
 
 ### Rate controller section state
 It is really important that the Spray Control computer knows how many sections are spraying in order to adjust rate correctly. So, the info should be coming from the output of the relays instead of the output of the switches as before. 
 
-I have used another PC817 optocoupler board to get the 12v status from relay board and switch rate computer pin to GND. Note that it requires to remove the 3K resistor so I soldered a wire to bypass it.
+A second PC817 optocoupler board has been used to get the 12v status from relay board and switch rate computer pin to GND. Note that it requires to remove the 3K resistor so a wire has been soldered on the board to bypass it.
 
 ![relays](/Mueller_Spray_control-integration/Images/relays.png)
 
 ## Hardware
-I have designed a 3D printed box that fits between Mueller Spray Control box and the switches box, that way I can connect to the section wires and give the signal from real status(relay board+optocoupler). In order to centralize the switches, the man/auto switch has been put on this 3D printed box which fits perfectly like a 3rd Mueller box. I have also added 7 leds that shows the section state based on the relays as the original led on shows the switches state.
+A 3D printed box that fits between Mueller Spray Control box and the switches box has been designed, it allows to connect to the Spray Control S box and send the section signal from real status(relay board+optocoupler). In order to centralize the switches, the man/auto switch has been put on this 3D printed box which fits perfectly like a 3rd Mueller box. 7 leds have also added to show the section state based on the relays as the original led only shows the switches state.
 
 The box model is available in [3D](/Mueller_Spray_control-integration/3D) folder.
 
