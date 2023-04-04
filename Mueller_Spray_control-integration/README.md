@@ -38,6 +38,8 @@ The connectors between Mueller boxes are Harting 48pins DIN 41612 connectors.
 
 The connectors between Mueller box and sprayer are 30pins DIN 41622 connectors that I ordered at Beyne factory webshop : [30p male](https://erp.beyne.be/fr_BE/shop/product/cnc-30-m-prise-30-poles-m-4485) and [30p female](https://erp.beyne.be/fr_BE/shop/product/cnc-30-v-prise-30-poles-f-4483).
 
+![3d box](/Mueller_Spray_control-integration/Images/3d.png)
+
 ## Mueller Pinout
 ### Spray Control S 48pins connector
 
